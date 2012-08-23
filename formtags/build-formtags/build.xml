@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="virgo-formtags-sample" default="precommit">
+
+	<path id="bundles">
+		<pathelement location="${basedir}/../war/formtags-war" />
+		<pathelement location="${basedir}/../shared-libs/formtags-shared-libs"/>
+		
+		<pathelement location="${basedir}/../shared-services/formtags-shared-services-service"/>
+		<pathelement location="${basedir}/../shared-services/formtags-shared-services-war"/>
+		
+		<pathelement location="${basedir}/../par/org.springframework.showcase.formtags"/>
+	</path>
+
+	<property file="${basedir}/../build.properties"/>
+	<import file="${basedir}/package-top-level.xml"/>
+	<import file="${basedir}/publish-top-level.xml"/>
+	<import file="${basedir}/../virgo-build/multi-bundle/default.xml"/>
+
+	<target name="precommit" depends="clean, clean-integration, jar"/>
+
+</project>

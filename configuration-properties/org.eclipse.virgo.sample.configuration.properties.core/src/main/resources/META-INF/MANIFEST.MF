@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.virgo.sample.configuration.properties.core
+ ;version="2.0.0";uses:="org.osgi.service.cm"
+Bundle-Version: 3.0.0
+Tool: Bundlor 1.0.0.BUILD-20091207202403
+Bundle-Name: Configuration Sample Content Bundle
+Bundle-ManifestVersion: 2
+Bundle-Description: Configuration Sample Content Provider
+Bundle-SymbolicName: org.eclipse.virgo.sample.configuration.properties
+ .core
+Import-Package: org.osgi.service.cm;version="0"
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="formtags-war" xmlns:ivy="antlib:org.apache.ivy.ant">
+
+	<property file="${basedir}/../../build.properties"/>
+	<property file="${basedir}/../../build.versions"/>
+    <import file="${basedir}/../../build-formtags/package-bundle.xml" />
+
+	<import file="${basedir}/../../virgo-build/war/default.xml"/>
+
+</project>

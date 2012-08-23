@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="formtags-par">
+
+    <path id="bundles">
+        <pathelement location="../org.springframework.showcase.formtags.domain" />
+        <pathelement location="../org.springframework.showcase.formtags.service" />
+        <pathelement location="../org.springframework.showcase.formtags.web" />
+    </path>
+
+    <property file="${basedir}/../../build.properties" />
+    <property file="${basedir}/../../build.versions" />
+    <import file="${basedir}/../../build-formtags/package-bundle.xml" />
+    <import file="${basedir}/../../virgo-build/par/default.xml" />
+
+</project>

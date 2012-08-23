@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Version: 3.0.0
+Bundle-Name: FormTags Domain Model
+Bundle-SymbolicName: org.springframework.showcase.formtags.domain_par
+Export-Package: org.springframework.showcase.formtags.domain
+Import-Bundle: javax.servlet;version="2.5.0"
+Import-Library: org.springframework.spring;version="[2.5.6.A,4.0.0)"

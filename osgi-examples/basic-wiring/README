@@ -1,0 +1,31 @@
+Simple wiring example base project.
+
+Part 1 - Imports/Exports
+========================
+
+1. Install the bundles into Equinox. Start bundle.x, it will wire to bundle.y2 for its dependencies.
+
+Part 2 - Attributes
+========================
+
+1. Add an attribute to the import of 'p' in bundle.x
+2. Show the failed resolve
+3. Add the matching attribute to the export of 'p' in bundle.y1
+4. Show the mixed bundle resolve
+
+Part 3 - Mandatory Attributes
+=============================
+
+1. Add a mandatory attribute to the export 'q' in 'bundle.y2'
+2. Show how bundle.x cannot wire to it
+3. Now match that attribute in bundle.x
+
+Part 4 - Uses
+==============================
+
+1. Install bundle.z
+2. Add import of 'r' into bundle.x
+3. Show how bundle.x is wired to bundle.z for 'r'
+4. Show wiring of bundle.z
+5. Now, change the version of the 'p' import in bundle.x to [1.2.4,-)
+6. Show how this cannot resolve

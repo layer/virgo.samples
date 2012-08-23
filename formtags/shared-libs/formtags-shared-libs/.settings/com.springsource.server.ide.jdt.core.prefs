@@ -1,0 +1,5 @@
+#Tue Jun 16 09:52:56 BST 2009
+com.springsource.server.ide.jdt.core.source.attachment-com.springsource.javax.servlet-2.5.0.jar=/opt/springsource-dm-server-2.0.0.BUILD-20090615152747/repository/bundles/usr/com.springsource.javax.servlet-sources-2.5.0.jar
+com.springsource.server.ide.jdt.core.source.attachment-com.springsource.javax.servlet.jsp.jstl-1.2.0.jar=/opt/springsource-dm-server-2.0.0.BUILD-20090615152747/repository/bundles/usr/com.springsource.javax.servlet.jsp.jstl-sources-1.2.0.jar
+com.springsource.server.ide.jdt.core.source.attachment-org.springframework.web-3.0.0.CI-282.jar=/Users/chrisfrost/SVN_Repos/dm-server-servlet/main-branches/jersey/ivy-cache/repository/org.springframework/org.springframework.web/3.0.0.CI-282/org.springframework.web-sources-3.0.0.CI-282.jar
+eclipse.preferences.version=1
