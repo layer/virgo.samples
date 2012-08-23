@@ -19,7 +19,7 @@
     <dependencies>
         <dependency org="org.eclipse.virgo.samples" name="formtags-shared-services-service" rev="latest.integration" conf="provided->compile"/>
 
-        <dependency org="org.springframework" name="org.springframework.spring-library" rev="${org.springframework.spring}" conf="provided->compile"/>
+        <dependency org="org.springframework" name="org.springframework.spring-library" rev="${org.springframework}" conf="provided->compile"/>
         <dependency org="javax.servlet" name="com.springsource.javax.servlet" rev="2.5.0" conf="provided->compile"/>
         <dependency org="org.apache.taglibs" name="com.springsource.org.apache.taglibs.standard" rev="1.1.2" conf="provided->compile"/>
     </dependencies>

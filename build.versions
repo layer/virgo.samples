@@ -17,7 +17,7 @@ org.eclipse.equinox.cm=1.0.300.v20101204
 org.slf4j=1.5.10
 org.springframework.js=2.0.8.RELEASE
 org.springframework.osgi=1.2.1
-org.springframework=3.0.0.RELEASE
+org.springframework=3.0.5.RELEASE
 
 # Test
 org.eclipse.virgo.teststubs=3.0.0.D-20110209111336

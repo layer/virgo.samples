@@ -17,7 +17,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.springframework" name="org.springframework.spring-library" rev="${org.springframework.spring}" conf="server-provided->compile"/>
+        <dependency org="org.springframework" name="org.springframework.spring-library" rev="${org.springframework}" conf="server-provided->compile"/>
     </dependencies>
 
 </ivy-module>

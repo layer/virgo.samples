@@ -8,3 +8,4 @@ derby.log
 .ant-targets-build.xml
 com.cenqua.clover.core.prefs
 user-ivy.properties
+.DS_Store
