@@ -11,4 +11,5 @@ Import-Package: org.springframework.showcase.formtags.domain,
 Import-Bundle: com.springsource.org.apache.taglibs.standard;version="1.1.2"
 Import-Library: org.springframework.spring;version="[2.5.6.A,5.0.0)"
 Web-ContextPath: formtags-par
+Bundle-Classpath: WEB-INF/classes
 
