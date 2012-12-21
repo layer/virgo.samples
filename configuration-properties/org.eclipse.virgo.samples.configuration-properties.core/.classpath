@@ -28,5 +28,6 @@
 	<classpathentry kind="var" path="IVY_CACHE/org.eclipse.osgi/org.eclipse.osgi/3.6.1.R36x_v20100806/org.eclipse.osgi-3.6.1.R36x_v20100806.jar" sourcepath="/IVY_CACHE/org.eclipse.osgi/org.eclipse.osgi/3.6.1.R36x_v20100806/org.eclipse.osgi-sources-3.6.1.R36x_v20100806.jar"/>
 	<classpathentry kind="var" path="IVY_CACHE/org.springframework.osgi/org.springframework.osgi.core/1.2.1/org.springframework.osgi.core-1.2.1.jar"/>
 	<classpathentry kind="var" path="IVY_CACHE/org.apache.felix/org.apache.felix.configadmin/1.2.4/org.apache.felix.configadmin-1.2.4.jar" sourcepath="/IVY_CACHE/org.apache.felix/org.apache.felix.configadmin/1.2.4/org.apache.felix.configadmin-sources-1.2.4.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Virgo Runtime at localhost Server"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

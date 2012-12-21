@@ -33,7 +33,7 @@
 	<classpathentry kind="var" path="IVY_CACHE/org.apache.taglibs/com.springsource.org.apache.taglibs.standard/1.1.2/com.springsource.org.apache.taglibs.standard-1.1.2.jar"/>
 	<classpathentry kind="var" path="IVY_CACHE/org.eclipse.osgi/org.eclipse.osgi/3.6.1.R36x_v20100806/org.eclipse.osgi-3.6.1.R36x_v20100806.jar" sourcepath="/IVY_CACHE/org.eclipse.osgi/org.eclipse.osgi/3.6.1.R36x_v20100806/org.eclipse.osgi-sources-3.6.1.R36x_v20100806.jar"/>
 	<classpathentry kind="var" path="IVY_CACHE/org.apache.felix/org.apache.felix.configadmin/1.2.4/org.apache.felix.configadmin-1.2.4.jar" sourcepath="/IVY_CACHE/org.apache.felix/org.apache.felix.configadmin/1.2.4/org.apache.felix.configadmin-sources-1.2.4.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.eclipse.virgo.sample.configuration.properties.core"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eclipse.virgo.samples.configuration-properties.core"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

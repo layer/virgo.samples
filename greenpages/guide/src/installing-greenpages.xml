@@ -140,12 +140,12 @@ prompt$ export GREENPAGES_HOME=/opt/springsource/samples/@greenpages.expanded.di
 
 <para>Installing dependencies on Windows:
 <programlisting>prompt> cd %GREENPAGES_HOME%\greenpages 
-prompt> copy target\par-provided\* %SERVER_HOME%\repoorg.apache.commons.fileuploadsitory\usr
+prompt> copy target\par-provided\* %SERVER_HOME%\repository\usr
 </programlisting>
 </para>
 
 <para>Installing dependencies on UNIX:
-<programlisting>prompt$ cd $GREENPAGES_HOME/org.apache.commons.fileuploadgreenpages 
+<programlisting>prompt$ cd $GREENPAGES_HOME/greenpages 
 prompt$ cp target/par-provided/* $SERVER_HOME/repository/usr
 </programlisting>
 </para>
