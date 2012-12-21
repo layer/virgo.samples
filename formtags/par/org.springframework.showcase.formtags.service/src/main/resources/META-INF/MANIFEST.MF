@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Bundle-Version: 3.0.0
-Bundle-ManifestVersion: 2
-Bundle-Name: FormTags Service (and implementation)
-Bundle-SymbolicName: org.springframework.showcase.formtags.service_par
-Import-Package: org.springframework.showcase.formtags.domain
-Export-Package: org.springframework.showcase.formtags.service
-

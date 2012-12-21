@@ -15,16 +15,16 @@ converted into a PAR with domain and service bundles as well as a Web Module.
 
 PROJECTS
 
- - org.springframework.showcase.formtags:         the build directory for the PAR
- - org.springframework.showcase.formtags.domain:  the domain classes
- - org.springframework.showcase.formtags.service: the service API and implementation
- - org.springframework.showcase.formtags.web:     the web module
+ - org.eclipse.virgo.samples.formtags.formtags:         the build directory for the PAR
+ - org.eclipse.virgo.samples.formtags.formtags.domain:  the domain classes
+ - org.eclipse.virgo.samples.formtags.formtags.service: the service API and implementation
+ - org.eclipse.virgo.samples.formtags.formtags.web:     the web module
 
 --------------------------------------------------------------------------------
 
 BUILD AND DEPLOYMENT
 
-1) $> cd org.springframework.showcase.formtags
+1) $> cd org.eclipse.virgo.samples.formtags.formtags
 
 2) $> ant jar
 

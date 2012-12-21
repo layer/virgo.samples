@@ -1,0 +1,3 @@
+To build all the samples and produce a combined zip for distribution, run;
+
+ant clean test package

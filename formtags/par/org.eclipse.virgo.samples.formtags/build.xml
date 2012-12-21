@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="org.eclipse.virgo.samples.formtags.par">
+
+    <path id="bundles">
+        <pathelement location="../org.eclipse.virgo.samples.formtags.domain" />
+        <pathelement location="../org.eclipse.virgo.samples.formtags.service" />
+        <pathelement location="../org.eclipse.virgo.samples.formtags.web" />
+    </path>
+
+    <property file="${basedir}/../../../build.properties" />
+    <property file="${basedir}/../../../build.versions" />
+    <import file="${basedir}/../../../build-samples/package-bundle.xml" />
+    <import file="${basedir}/../../../virgo-build/par/default.xml" />
+
+</project>

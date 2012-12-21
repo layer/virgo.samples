@@ -5,14 +5,14 @@
 
 	<path id="bundles">
 		<path refid="unit.test.bundles" />
-		<pathelement location="../configuration-properties/org.eclipse.virgo.sample.configuration.properties.properties"/>
-		<pathelement location="../configuration-properties/org.eclipse.virgo.sample.configuration.properties.core"/>
-		<pathelement location="../configuration-properties/org.eclipse.virgo.sample.configuration.properties.web"/>
-		<pathelement location="../formtags/war/formtags-war" />
-		<pathelement location="../formtags/shared-libs/formtags-shared-libs"/>
-		<pathelement location="../formtags/shared-services/formtags-shared-services-service"/>
-		<pathelement location="../formtags/shared-services/formtags-shared-services-war"/>
-		<pathelement location="../formtags/par/org.springframework.showcase.formtags"/>
+		<pathelement location="../configuration-properties/org.eclipse.virgo.samples.configuration-properties.properties"/>
+		<pathelement location="../configuration-properties/org.eclipse.virgo.samples.configuration-properties.core"/>
+		<pathelement location="../configuration-properties/org.eclipse.virgo.samples.configuration-properties.web"/>
+		<pathelement location="../formtags/war/org.eclipse.virgo.samples.formtags.war" />
+		<pathelement location="../formtags/shared-libs/org.eclipse.virgo.samples.formtags.shared-libs"/>
+		<pathelement location="../formtags/shared-services/org.eclipse.virgo.samples.formtags.shared-services.service"/>
+		<pathelement location="../formtags/shared-services/org.eclipse.virgo.samples.formtags.shared-services.war"/>
+		<pathelement location="../formtags/par/org.eclipse.virgo.samples.formtags"/>
 	</path>
 
 	<path id="doc.bundles">
@@ -26,7 +26,7 @@
 	<property file="${basedir}/../build.versions"/>
 	<import file="${basedir}/../virgo-build/multi-bundle/default.xml"/>
 
-	<target name="package-greenpages" description="Creates the release package for this project">
+	<target name="package" description="Creates the release package for this project">
 		<delete dir="${package.output.dir}" quiet="true"/>
 		<mkdir dir="${package.output.dir}"/>
 		<delete file="${package.output.file}" quiet="true"/>
@@ -36,7 +36,7 @@
 			<property name="docbook.output.dir" value="${package.docs.dir}"/>
 		</all-bundles>
 		
-		<copy todir="${package.output.dir}">
+		<copy todir="${package.output.dir}/greenpages">
 			<fileset dir="${basedir}/../greenpages">
 				<include name="db/**"/>
 				<include name="greenpages/**"/>
@@ -48,6 +48,33 @@
 				<include name="pom.xml"/>
 				<exclude name="**/target/**"/>
 			</fileset>
+		</copy>
+		
+		<copy todir="${package.output.dir}/osgi-101">
+			<fileset dir="${basedir}/../osgi-examples">
+				<include name="bundle.x/**"/>
+				<include name="bundle.y1/**"/>
+				<include name="bundle.y2/**"/>
+				<include name="bundle.z/**"/>
+				<include name="commands"/>
+				<exclude name="**/target/**"/>
+			</fileset>
+		</copy>
+		
+		<copy todir="${package.output.dir}/configuration-properties">
+			<fileset dir="${basedir}/../configuration-properties">
+				<include name="**/target/artifacts/*.jar"/>
+				<include name="**/target/artifacts/*.war"/>
+			</fileset>
+			<flattenmapper/>
+		</copy>
+		
+		<copy todir="${package.output.dir}/formtags">
+			<fileset dir="${basedir}/../formtags">
+				<include name="**/target/artifacts/*.jar"/>
+				<include name="**/target/artifacts/*.war"/>
+			</fileset>
+			<flattenmapper/>
 		</copy>
 
 		<chmod perm="755">
