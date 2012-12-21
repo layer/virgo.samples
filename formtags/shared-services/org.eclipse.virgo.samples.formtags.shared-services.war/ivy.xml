@@ -17,7 +17,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.eclipse.virgo.samples" name="formtags-shared-services-service" rev="latest.integration" conf="provided->compile"/>
+        <dependency org="org.eclipse.virgo.samples" name="org.eclipse.virgo.samples.formtags.shared-services.service" rev="latest.integration" conf="provided->compile"/>
 
         <dependency org="org.springframework" name="org.springframework.spring-library" rev="${org.springframework}" conf="provided->compile"/>
         <dependency org="javax.servlet" name="com.springsource.javax.servlet" rev="2.5.0" conf="provided->compile"/>

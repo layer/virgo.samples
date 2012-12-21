@@ -17,8 +17,8 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.eclipse.virgo.samples" name="org.eclipse.virgo.samples.formtags.formtags.domain" rev="latest.integration" conf="compile->compile"/>
-        <dependency org="org.eclipse.virgo.samples" name="org.eclipse.virgo.samples.formtags.formtags.service" rev="latest.integration" conf="compile->compile"/>
+        <dependency org="org.eclipse.virgo.samples" name="org.eclipse.virgo.samples.formtags.par.domain" rev="latest.integration" conf="compile->compile"/>
+        <dependency org="org.eclipse.virgo.samples" name="org.eclipse.virgo.samples.formtags.par.service" rev="latest.integration" conf="compile->compile"/>
     
         <dependency org="org.springframework" name="org.springframework.spring-library" rev="${org.springframework}" conf="server-provided->compile"/>
         <dependency org="javax.servlet" name="com.springsource.javax.servlet" rev="2.5.0" conf="server-provided->compile"/>

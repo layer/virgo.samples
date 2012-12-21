@@ -17,7 +17,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.eclipse.virgo.samples" name="org.eclipse.virgo.samples.formtags.formtags.domain" rev="latest.integration" conf="compile->compile"/>
+        <dependency org="org.eclipse.virgo.samples" name="org.eclipse.virgo.samples.formtags.par.domain" rev="latest.integration" conf="compile->compile"/>
     </dependencies>
 
 </ivy-module>
