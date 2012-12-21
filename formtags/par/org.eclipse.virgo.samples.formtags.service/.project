@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.eclipse.virgo.samples.formtags.formtags.service</name>
+	<name>org.eclipse.virgo.samples.formtags.par.service</name>
 	<comment></comment>
 	<projects>
-		<project>org.eclipse.virgo.samples.formtags.formtags.domain</project>
+		<project>org.eclipse.virgo.samples.formtags.par.domain</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>formtags-shared-services-service</name>
+	<name>org.eclipse.virgo.samples.formtags.shared-services.service</name>
 	<comment></comment>
 	<projects>
 	</projects>

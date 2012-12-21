@@ -4,7 +4,7 @@ Import-Bundle: com.springsource.org.eclipse.persistence;version="[1.0.
  .0, 1.0.0]"
 Bundle-Vendor: SpringSource
 Bundle-Version: 2.5.0
-Tool: Bundlor 1.1.0.M04
+Tool: Bundlor 1.1.0.RELEASE
 Bundle-Name: GreenPages JPA
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: greenpages.jpa
