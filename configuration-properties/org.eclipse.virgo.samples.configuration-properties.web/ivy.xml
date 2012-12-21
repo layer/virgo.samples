@@ -18,7 +18,7 @@
 
 	<dependencies>
 		<!-- === PROVIDED-COMPILE============================================ -->
-        <dependency org="org.eclipse.virgo.samples" name="org.eclipse.virgo.sample.configuration-properties.core" rev="latest.integration" conf="provided->compile"/>
+        <dependency org="org.eclipse.virgo.samples" name="org.eclipse.virgo.samples.configuration-properties.core" rev="latest.integration" conf="provided->compile"/>
 		<!-- === RUNTIME-DEFAULT =========================================== -->
 		<!-- === PROVIDED-RUNTIME =========================================== -->
 		<dependency org="javax.servlet" name="com.springsource.javax.servlet" rev="${javax.servlet}" conf="provided->runtime"/>

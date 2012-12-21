@@ -12,7 +12,7 @@
 	</configurations>
 
 	<publications>
-		<artifact name="org.eclipse.virgo.sample.configuration" type="resource" ext="properties" />
+		<artifact name="org.eclipse.virgo.samples.configuration" type="resource" ext="properties" />
 	</publications>
 
 	<dependencies>
