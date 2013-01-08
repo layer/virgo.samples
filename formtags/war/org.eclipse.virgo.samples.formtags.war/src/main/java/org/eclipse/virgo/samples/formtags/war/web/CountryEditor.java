@@ -8,11 +8,7 @@
  * Contributors:
  *   VMware Inc. - initial contribution
  *******************************************************************************/
-
 package org.eclipse.virgo.samples.formtags.war.web;
-
-
-
 
 import org.eclipse.virgo.samples.formtags.war.domain.Country;
 import org.eclipse.virgo.samples.formtags.war.service.UserManager;
@@ -21,68 +17,32 @@ import org.eclipse.virgo.samples.formtags.war.service.UserManager;
 
 import java.beans.PropertyEditorSupport;
 
-
-
 /**
-
  * Simple {@link java.beans.PropertyEditor} for the {@link org.eclipse.virgo.samples.formtags.war.domain.Country} class.
-
  * 
-
-
  */
-
 public class CountryEditor extends PropertyEditorSupport {
-
-
 
     private UserManager userManager;
 
-
-
-
-
     /**
-
      * Creates a new instance of the {@link org.eclipse.virgo.samples.formtags.war.web.CountryEditor} class.
-
      *
-
      * @param userManager the service object that is to be used to resolve country codes
-
      */
-
     public CountryEditor(UserManager userManager) {
-
         this.userManager = userManager;
-
     }
-
-
-
-
 
     public void setAsText(String text) throws IllegalArgumentException {
-
         setValue(this.userManager.findCountry(text));
-
     }
-
-
 
     public String getAsText() {
-
         if (getValue() == null) {
-
             return "";
-
         }
-
         return ((Country) getValue()).getCode();
-
     }
-
-
-
+    
 }
-

@@ -13,9 +13,9 @@ package org.eclipse.virgo.samples.formtags.formtags.web;
 
 
 
-import org.eclipse.virgo.samples.formtags.sharedservice.domain.Country;
 
-import org.eclipse.virgo.samples.formtags.sharedservice.service.UserManager;
+import org.eclipse.virgo.samples.formtags.sharedservices.domain.Country;
+import org.eclipse.virgo.samples.formtags.sharedservices.service.UserManager;
 
 
 

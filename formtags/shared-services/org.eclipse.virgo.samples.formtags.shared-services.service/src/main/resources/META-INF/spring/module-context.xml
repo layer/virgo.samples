@@ -10,6 +10,6 @@
 			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
 			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
-    <bean id="userManager" class="org.eclipse.virgo.samples.formtags.formtags.service.internal.StubUserManager"/>
+    <bean id="userManager" class="org.eclipse.virgo.samples.formtags.sharedservices.service.internal.StubUserManager"/>
 
 </beans>

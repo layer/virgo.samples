@@ -8,10 +8,7 @@
  * Contributors:
  *   VMware Inc. - initial contribution
  *******************************************************************************/
-
 package org.eclipse.virgo.samples.formtags.formtags.web;
-
-
 
 import org.eclipse.virgo.samples.formtags.par.service.UserManager;
 
@@ -25,74 +22,37 @@ import javax.servlet.http.HttpServletRequest;
 
 import javax.servlet.http.HttpServletResponse;
 
-
-
 /**
-
  * Simple {@link org.springframework.web.servlet.mvc.Controller} implementation
-
  * that pretty much locates (and thus allows a {@link org.springframework.web.servlet.View}
-
  * to render a list) of all of the {@link org.eclipse.virgo.samples.formtags.formtags.domain.User Users}
-
  * in the application.
-
  *
-
-
  */
-
 public class ListController extends AbstractController {
-
-
-
-
 
     private UserManager userManager;
 
     private String viewName;
 
-
-
     public void setViewName(String viewName) {
-
         this.viewName = viewName;
-
     }
-
-
 
     /**
-
      * Sets the {@link UserManager} that to which this presentation component delegates
-
      * in order to perform complex business logic.
-
      *
-
      * @param userManager the {@link UserManager} that to which this presentation component delegates
-
      *                    in order to perform complex business logic
-
      */
-
     public void setUserManager(UserManager userManager) {
-
         this.userManager = userManager;
-
     }
-
-
-
-
-
+    
     protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         return new ModelAndView(viewName).addObject(this.userManager.findAll());
-
     }
-
-
-
+    
 }
 

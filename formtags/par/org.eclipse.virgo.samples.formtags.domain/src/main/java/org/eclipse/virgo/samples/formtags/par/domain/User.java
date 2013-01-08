@@ -11,28 +11,15 @@
 
 package org.eclipse.virgo.samples.formtags.par.domain;
 
-
-
 import java.util.ArrayList;
-
 import java.util.List;
 
-
-
 /**
-
  * Models a user.
-
  *
-
-
  */
 
 public class User implements Cloneable {
-
-
-
-
 
     private Integer id;
 
@@ -48,7 +35,7 @@ public class User implements Cloneable {
 
     private Colour favouriteColour = Colour.RED;
 
-    private List skills = new ArrayList();
+    private List<String> skills = new ArrayList<String>();
 
     private char sex;
 
@@ -58,38 +45,20 @@ public class User implements Cloneable {
 
     private String secretWord;
 
-
-
-
-
     public Integer getId() {
-
         return id;
-
     }
-
-
 
     public void setId(Integer id) {
-
         this.id = id;
-
     }
-
-
 
     public String getFirstName() {
-
         return firstName;
-
     }
 
-
-
     public void setFirstName(String firstName) {
-
         this.firstName = firstName;
-
     }
 
 
@@ -204,65 +173,32 @@ public class User implements Cloneable {
 
     }
 
-
-
-    public List getSkills() {
-
+    public List<String> getSkills() {
         return skills;
-
     }
 
-
-
-    public void setSkills(List skills) {
-
+    public void setSkills(List<String> skills) {
         this.skills = skills;
-
     }
-
-
 
     public String getPassword() {
-
         return password;
-
     }
-
-
 
     public void setPassword(String password) {
-
         this.password = password;
-
     }
-
-
 
     public String getSecretWord() {
-
         return secretWord;
-
     }
-
-
 
     public void setSecretWord(String secretWord) {
-
         this.secretWord = secretWord;
-
     }
-
-
-
-
 
     public Object clone() throws CloneNotSupportedException {
-
         return super.clone();
-
     }
 
-
-
 }
-

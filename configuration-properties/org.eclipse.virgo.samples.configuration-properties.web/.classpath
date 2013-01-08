@@ -10,16 +10,6 @@
 			<attribute name="com.springsource.server.ide.jdt.core.test.classpathentry" value="false"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
-		<attributes>
-			<attribute name="com.springsource.server.ide.jdt.core.test.classpathentry" value="false"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" output="target/test-classes" path="src/test/resources">
-		<attributes>
-			<attribute name="com.springsource.server.ide.jdt.core.test.classpathentry" value="false"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="var" path="IVY_CACHE/org.springframework/org.springframework.web/3.1.0.RELEASE/org.springframework.web-3.1.0.RELEASE.jar" sourcepath="/IVY_CACHE/org.springframework/org.springframework.web/3.0.0.RELEASE/org.springframework.web-sources-3.0.0.RELEASE.jar"/>
 	<classpathentry kind="var" path="IVY_CACHE/org.springframework/org.springframework.beans/3.1.0.RELEASE/org.springframework.beans-3.1.0.RELEASE.jar"/>
 	<classpathentry kind="var" path="IVY_CACHE/org.springframework/org.springframework.web.servlet/3.1.0.RELEASE/org.springframework.web.servlet-3.1.0.RELEASE.jar" sourcepath="/IVY_CACHE/org.springframework/org.springframework.web.servlet/3.0.0.RELEASE/org.springframework.web.servlet-sources-3.0.0.RELEASE.jar"/>

@@ -8,6 +8,6 @@
        http://www.springframework.org/schema/beans   
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <service ref="userManager" interface="org.eclipse.virgo.samples.formtags.formtags.service.UserManager" />
+    <service ref="userManager" interface="org.eclipse.virgo.samples.formtags.sharedservices.service.UserManager" />
                
 </beans:beans>           

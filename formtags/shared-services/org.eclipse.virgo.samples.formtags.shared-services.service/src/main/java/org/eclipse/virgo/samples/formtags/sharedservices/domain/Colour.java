@@ -8,47 +8,25 @@
  * Contributors:
  *   VMware Inc. - initial contribution
  *******************************************************************************/
-
-package org.eclipse.virgo.samples.formtags.sharedservice.domain;
-
-
+package org.eclipse.virgo.samples.formtags.sharedservices.domain;
 
 import org.springframework.core.enums.ShortCodedLabeledEnum;
 
-
-
 /**
-
  * Simple enumeration for common colors.
-
  *
-
-
  */
-
 public class Colour extends ShortCodedLabeledEnum {
 
+	private static final long serialVersionUID = 1L;
 
-
-
-
-    public static final Colour RED = new Colour(0, "RED");
+	public static final Colour RED = new Colour(0, "RED");
 
     public static final Colour GREEN = new Colour(1, "GREEN");
 
     public static final Colour BLUE = new Colour(2, "BLUE");
 
-
-
-
-
     private Colour(int code, String label) {
-
         super(code, label);
-
     }
-
-
-
 }
-

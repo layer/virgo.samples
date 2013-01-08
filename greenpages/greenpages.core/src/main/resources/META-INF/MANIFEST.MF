@@ -6,4 +6,5 @@ Tool: Bundlor 1.1.0.RELEASE
 Bundle-Name: GreenPages Service
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: greenpages.core
+Import-Package: org.springframework.stereotype;version="[3.0, 3.5)"
 

@@ -14,5 +14,6 @@
 	<natures>
 		<nature>com.springsource.server.ide.facet.core.bundlenature</nature>
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
+		<nature>org.eclipse.virgo.ide.facet.core.bundlenature</nature>
 	</natures>
 </projectDescription>

@@ -8,95 +8,46 @@
  * Contributors:
  *   VMware Inc. - initial contribution
  *******************************************************************************/
-
 package org.eclipse.virgo.samples.formtags.war.domain;
 
-
-
 /**
-
  * Models a country.
-
  *
-
-
  */
-
-public class Country implements Comparable {
-
-
-
-
+public class Country implements Comparable<Country> {
 
     private String code;
 
     private String name;
 
-
-
-
-
     /**
-
      * Creates a new instance of this {@link Country} class.
-
      */
-
     public Country() {
 
     }
 
-
-
     /**
-
      * Creates a new instance of this {@link Country} class.
-
      *
-
      * @param code the country code
-
      * @param name the name of the country
-
      */
-
     public Country(String code, String name) {
-
         this.code = code;
-
         this.name = name;
-
     }
-
-
-
-
-
+    
     public String getCode() {
-
         return code;
-
     }
-
-
 
     public String getName() {
-
         return name;
-
     }
 
-
-
-
-
-    public int compareTo(Object o) {
-
-        return this.code.compareTo(((Country) o).code);
-
+    public int compareTo(Country c) {
+        return this.code.compareTo(c.code);
     }
-
-
 
 }
-
