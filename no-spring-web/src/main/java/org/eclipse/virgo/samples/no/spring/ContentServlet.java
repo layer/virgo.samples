@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.eclipse.virgo.apps.splash;
+package org.eclipse.virgo.samples.no.spring;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -61,9 +61,9 @@ public class ContentServlet extends HttpServlet {
 	
 	private static final String PATH_TO_VERSION_FILE = "lib/.version";
 	
-	private static final String VERSION_HOLDER = "<!--@<version@-->";
+	private static final String SAMPLE_HOLDER = "<!--@<sample-string@-->";
 	
-	private String view = "/WEB-INF/splash.html";
+	private String view = "/WEB-INF/sample.html";
 	
 	private boolean gzipEnabled = true;
 	
@@ -121,9 +121,9 @@ public class ContentServlet extends HttpServlet {
 	}
 
 	private String parseLine(String line) {
-		if(line.contains(VERSION_HOLDER)){
-			int offset = line.indexOf(VERSION_HOLDER);
-			line = String.format("%s%s%s", line.substring(0, offset), this.version, line.substring(offset + VERSION_HOLDER.length()));
+		if(line.contains(SAMPLE_HOLDER)){
+			int offset = line.indexOf(SAMPLE_HOLDER);
+			line = String.format("%s%s%s", line.substring(0, offset), this.version, line.substring(offset + SAMPLE_HOLDER.length()));
 		}
 		return line;
 	}

@@ -1,4 +1,4 @@
-package org.eclipse.virgo.apps.splash;
+package org.eclipse.virgo.samples.no.spring;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
