@@ -13,6 +13,7 @@
 		<pathelement location="../formtags/shared-services/org.eclipse.virgo.samples.formtags.shared-services.service"/>
 		<pathelement location="../formtags/shared-services/org.eclipse.virgo.samples.formtags.shared-services.war"/>
 		<pathelement location="../formtags/par/org.eclipse.virgo.samples.formtags"/>
+		<pathelement location="../no-spring-web"/>
 	</path>
 
 	<path id="doc.bundles">
@@ -65,6 +66,13 @@
 			<fileset dir="${basedir}/../configuration-properties">
 				<include name="**/target/artifacts/*.jar"/>
 				<include name="**/target/artifacts/*.war"/>
+			</fileset>
+			<flattenmapper/>
+		</copy>
+		
+		<copy todir="${package.output.dir}/no-spring-web">
+			<fileset dir="${basedir}/../no-spring-web">
+				<include name="**/target/artifacts/*.jar"/>
 			</fileset>
 			<flattenmapper/>
 		</copy>

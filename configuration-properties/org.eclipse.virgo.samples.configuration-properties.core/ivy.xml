@@ -22,14 +22,13 @@
 		<!-- === RUNTIME-DEFAULT =========================================== -->
 
 		<!-- === PROVIDED-RUNTIME =========================================== -->
-		<dependency org="org.eclipse.osgi" name="org.eclipse.osgi" rev="${org.eclipse.osgi}" conf="provided->runtime"/>
-		<dependency org="org.eclipse.osgi" name="org.eclipse.equinox.cm" rev="${org.eclipse.equinox.cm}" conf='provided->runtime'/>
+		<dependency org="org.eclipse.virgo.mirrored" name="org.eclipse.osgi" rev="${org.eclipse.osgi}" conf="provided->runtime"/>
+		<dependency org="org.eclipse.virgo.mirrored" name="org.eclipse.equinox.cm" rev="${org.eclipse.equinox.cm}" conf='provided->runtime'/>
 		<dependency org="org.springframework" name="org.springframework.core" rev="${org.springframework}" conf="provided->runtime"/>
 		<dependency org="org.springframework" name="org.springframework.context" rev="${org.springframework}" conf="provided->runtime"/>
 		<dependency org="org.springframework" name="org.springframework.beans" rev="${org.springframework}" conf="provided->runtime"/>
-		<dependency org="org.springframework.osgi" name="org.springframework.osgi.core" rev="${org.springframework.osgi}" conf="provided->runtime"/>		
 		<!-- === TEST ====================================================== -->
-		<dependency org="org.junit" name="com.springsource.org.junit" rev="${org.junit.spring.3}" conf="test->runtime"/>
+		<dependency org="org.junit" name="com.springsource.org.junit" rev="${org.junit}" conf="test->runtime"/>
 		<dependency org="org.eclipse.virgo.teststubs" name="org.eclipse.virgo.teststubs.osgi" rev="${org.eclipse.virgo.teststubs}" conf="test->runtime"/>
 		
 	</dependencies>

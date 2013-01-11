@@ -205,7 +205,7 @@
 						<exclude>**/Abstract*.java</exclude>
 					</excludes>
 					<junitArtifactName>org.junit:com.springsource.org.junit</junitArtifactName>
-					<argLine>-javaagent:${user.home}/.m2/repository/org/springframework/org.springframework.instrument/3.0.5.RELEASE/org.springframework.instrument-3.0.5.RELEASE.jar</argLine>
+					<argLine>-javaagent:${user.home}/.m2/repository/org/springframework/org.springframework.instrument/3.1.0.RELEASE/org.springframework.instrument-3.1.0.RELEASE.jar</argLine>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -11,8 +11,6 @@
 
 package org.eclipse.virgo.samples.formtags.formtags.web;
 
-import org.springframework.core.enums.StaticLabeledEnumResolver;
-
 import org.eclipse.virgo.samples.formtags.par.domain.Colour;
 
 import org.eclipse.virgo.samples.formtags.par.domain.Country;
@@ -61,9 +59,8 @@ public class FormController extends SimpleFormController {
         binder.registerCustomEditor(Country.class, new CountryEditor(this.userManager));
         binder.registerCustomEditor(Colour.class, new PropertyEditorSupport() {
             public void setAsText(String string) throws IllegalArgumentException {
-                Short code = new Short(string);
-                StaticLabeledEnumResolver resolver = new StaticLabeledEnumResolver();
-                setValue(resolver.getLabeledEnumByCode(Colour.class, code));
+            	Integer code = new Integer(string);
+                setValue(Colour.getColour(code));
             }
         });
     }

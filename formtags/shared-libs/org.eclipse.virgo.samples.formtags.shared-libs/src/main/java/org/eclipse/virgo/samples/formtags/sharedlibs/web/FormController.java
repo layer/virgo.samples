@@ -10,33 +10,20 @@
  *******************************************************************************/
 package org.eclipse.virgo.samples.formtags.sharedlibs.web;
 
-import org.springframework.core.enums.StaticLabeledEnumResolver;
+import java.beans.PropertyEditorSupport;
+import java.util.Map;
 
-
-
+import javax.servlet.http.HttpServletRequest;
 
 import org.eclipse.virgo.samples.formtags.sharedlibs.domain.Colour;
 import org.eclipse.virgo.samples.formtags.sharedlibs.domain.Country;
 import org.eclipse.virgo.samples.formtags.sharedlibs.domain.User;
 import org.eclipse.virgo.samples.formtags.sharedlibs.service.UserManager;
-
 import org.springframework.ui.ModelMap;
-
 import org.springframework.validation.Errors;
-
 import org.springframework.web.bind.ServletRequestDataBinder;
-
 import org.springframework.web.bind.ServletRequestUtils;
-
 import org.springframework.web.servlet.mvc.SimpleFormController;
-
-
-
-import javax.servlet.http.HttpServletRequest;
-
-import java.beans.PropertyEditorSupport;
-
-import java.util.Map;
 
 /**
  * The central form controller for this showcase application.
@@ -60,9 +47,8 @@ public class FormController extends SimpleFormController {
         binder.registerCustomEditor(Country.class, new CountryEditor(this.userManager));
         binder.registerCustomEditor(Colour.class, new PropertyEditorSupport() {
             public void setAsText(String string) throws IllegalArgumentException {
-                Short code = new Short(string);
-                StaticLabeledEnumResolver resolver = new StaticLabeledEnumResolver();
-                setValue(resolver.getLabeledEnumByCode(Colour.class, code));
+            	Integer code = new Integer(string);
+                setValue(Colour.getColour(code));
             }
         });
     }

@@ -10,11 +10,6 @@
  *******************************************************************************/
 package org.eclipse.virgo.samples.formtags.war.web;
 
-import org.springframework.core.enums.StaticLabeledEnumResolver;
-
-
-
-
 import org.eclipse.virgo.samples.formtags.war.domain.Colour;
 import org.eclipse.virgo.samples.formtags.war.domain.Country;
 import org.eclipse.virgo.samples.formtags.war.domain.User;
@@ -50,7 +45,7 @@ public class FormController extends SimpleFormController {
 	 * Sets the {@link UserManager} to which this presentation component
 	 * delegates in order to perform complex business logic.
 	 * @param userManager the {@link UserManager} to which this presentation
-	 *                    component delegatesin order to perform complex business logic
+	 *                    component delegates in order to perform complex business logic
 	 */
 	public void setUserManager(UserManager userManager) {
 		this.userManager = userManager;
@@ -60,9 +55,8 @@ public class FormController extends SimpleFormController {
         binder.registerCustomEditor(Country.class, new CountryEditor(this.userManager));
         binder.registerCustomEditor(Colour.class, new PropertyEditorSupport() {
             public void setAsText(String string) throws IllegalArgumentException {
-                Short code = new Short(string);
-                StaticLabeledEnumResolver resolver = new StaticLabeledEnumResolver();
-                setValue(resolver.getLabeledEnumByCode(Colour.class, code));
+                Integer code = new Integer(string);
+                setValue(Colour.getColour(code));
             }
         });
     }

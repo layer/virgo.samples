@@ -11,23 +11,44 @@
 
 package org.eclipse.virgo.samples.formtags.par.domain;
 
-import org.springframework.core.enums.ShortCodedLabeledEnum;
-
 /**
  * Simple enumeration for common colors.
  *
  */
-public class Colour extends ShortCodedLabeledEnum {
+public enum Colour {
 
-    public static final Colour RED = new Colour(0, "RED");
-
-    public static final Colour GREEN = new Colour(1, "GREEN");
-
-    public static final Colour BLUE = new Colour(2, "BLUE");
-
+	RED(0, "RED"),
+	
+	GREEN(1, "GREEN"),
+	
+	BLUE(2, "BLUE");
+	
+	private final int code;
+	
+	private final String label;
+	
     private Colour(int code, String label) {
-        super(code, label);
+        this.code = code;
+        this.label = label;
     }
+
+	public String getLabel() {
+		return this.label;
+	}
+
+	public int getCode() {
+		return this.code;
+	}
+	
+	public static Colour getColour(int code){
+		Colour[] values = Colour.values();
+		for (Colour colour : values) {
+			if(colour.getCode() == code){
+				return colour;
+			}
+		}
+		return null;
+	}
 
 }
 
