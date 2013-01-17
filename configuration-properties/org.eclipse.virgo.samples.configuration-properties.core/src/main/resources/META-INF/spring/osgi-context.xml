@@ -9,8 +9,8 @@
 		http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium-1.2.xsd">
 
 
-    <osgi:service ref="propertiesService" interface="org.eclipse.virgo.sample.configuration.properties.core.PropertiesService"/>
+    <osgi:service ref="propertiesService" interface="org.eclipse.virgo.samples.configuration.properties.core.PropertiesService"/>
 
-	<osgi-compendium:cm-properties id="configAdminProperties" persistent-id="org.eclipse.virgo.sample.configuration"/>
+	<osgi-compendium:cm-properties id="configAdminProperties" persistent-id="org.eclipse.virgo.samples.configuration"/>
 	
 </beans>

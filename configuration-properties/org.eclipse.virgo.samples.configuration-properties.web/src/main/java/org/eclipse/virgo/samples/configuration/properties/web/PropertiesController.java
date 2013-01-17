@@ -9,14 +9,14 @@
  *   VMware Inc. - initial contribution
  *******************************************************************************/
 
-package org.eclipse.virgo.sample.configuration.properties.web;
+package org.eclipse.virgo.samples.configuration.properties.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import org.eclipse.virgo.sample.configuration.properties.core.PropertiesService;
+import org.eclipse.virgo.samples.configuration.properties.core.PropertiesService;
 
 
 /**
@@ -30,7 +30,6 @@ import org.eclipse.virgo.sample.configuration.properties.core.PropertiesService;
  *
  */
 @Controller
-@RequestMapping("/properties")
 public final class PropertiesController {
 
     @Autowired

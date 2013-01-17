@@ -9,7 +9,7 @@
  *   VMware Inc. - initial contribution
  *******************************************************************************/
 
-package org.eclipse.virgo.sample.configuration.properties.core;
+package org.eclipse.virgo.samples.configuration.properties.core;
 
 import java.util.Map;
 

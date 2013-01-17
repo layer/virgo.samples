@@ -65,7 +65,7 @@
 		<copy todir="${package.output.dir}/configuration-properties">
 			<fileset dir="${basedir}/../configuration-properties">
 				<include name="**/target/artifacts/*.jar"/>
-				<include name="**/target/artifacts/*.war"/>
+				<include name="**/target/artifacts/*.properties"/>
 			</fileset>
 			<flattenmapper/>
 		</copy>

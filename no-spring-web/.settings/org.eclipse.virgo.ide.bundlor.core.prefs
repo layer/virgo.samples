@@ -1,2 +1,4 @@
-org.eclipse.virgo.ide.bundlor.core.template.properties.files=../build.properties;../build.versions
+bundlor.generated.manifest.autoformatting=true
+byte.code.scanning=true
 eclipse.preferences.version=1
+template.properties.files=template.properties;../build.properties

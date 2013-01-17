@@ -5,10 +5,10 @@
 <head>
 	<title>Configuration properties sample</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<link rel="shortcut icon" href="<c:url value="/resources/images/favicon.ico"  />" />
-	<link rel="stylesheet" href="<c:url value="/resources/styles/main.css"        />" type="text/css" />
-	<link rel="stylesheet" href="<c:url value="/resources/styles/local.css"       />" type="text/css" />
-	<link rel="stylesheet" href="<c:url value="/resources/styles/print.css"       />" type="text/css" media="print" />
+	<link rel="shortcut icon" href="/resources/images/favicon.ico"  />
+	<link rel="stylesheet" href="/resources/styles/main.css"        type="text/css" />
+	<link rel="stylesheet" href="/resources/styles/local.css"       type="text/css" />
+	<link rel="stylesheet" href="/resources/styles/print.css"       type="text/css" media="print" />
 </head>
 <body class="main tundra">
 	<div id="page">
@@ -34,7 +34,7 @@
 			<div id="content-no-nav">
 				<h1 class="title">Configuration properties sample</h1>
 				<p>
-					The following properties have been found in 'org.eclipse.virgo.sample.configuration'.
+					The following properties have been found in 'org.eclipse.virgo.samples.configuration'.
 				</p>
 				<table id="properties" class="bordered-table">
 					<tr>
@@ -66,7 +66,7 @@
 		</div><!-- /container -->
 
 	<div id="footer-wrapper">
-		<div id="footer-left">&copy; Copyright 2008, 2010 VMware Inc. Licensed under the Eclipse Public License v1.0.</div>
+		<div id="footer-left">&copy; Copyright 2008, 2013 VMware Inc. Licensed under the Eclipse Public License v1.0.</div>
 		<div id="footer-right"></div> 
 	</div>
 	</div> <!-- /page-->

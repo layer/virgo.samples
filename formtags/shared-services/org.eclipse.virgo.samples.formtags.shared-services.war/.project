@@ -3,7 +3,7 @@
 	<name>org.eclipse.virgo.samples.formtags.shared-services.web</name>
 	<comment></comment>
 	<projects>
-		<project>formtags-shared-services-service</project>
+		<project>org.eclipse.virgo.samples.formtags.shared-services.service</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

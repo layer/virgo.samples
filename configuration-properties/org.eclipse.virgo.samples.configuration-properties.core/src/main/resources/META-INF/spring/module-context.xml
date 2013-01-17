@@ -7,7 +7,7 @@
 
 <!-- ARTEFACT MANAGER -->
 
-	<bean id="propertiesService" class="org.eclipse.virgo.sample.configuration.properties.core.StandardPropertiesService">
+	<bean id="propertiesService" class="org.eclipse.virgo.samples.configuration.properties.core.StandardPropertiesService">
 		<constructor-arg value="${driverClassName}"/>
 		<constructor-arg value="${url}"/>
 		<constructor-arg value="${username}"/>
