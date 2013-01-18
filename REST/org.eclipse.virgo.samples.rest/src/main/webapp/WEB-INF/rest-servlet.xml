@@ -11,10 +11,16 @@
 
 	<mvc:annotation-driven />
 	
-	<context:component-scan base-package="org.eclipse.virgo.samples.configuration.properties.web" />
+	<context:component-scan base-package="org.eclipse.virgo.samples.rest" />
+	
+	<!-- process the @RequestMapping annotations at the class level -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+
+	<!-- process the @RequestMapping annotations at the method level -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 	
 
-	<!-- VIEW CONFIG  -->
+	<!-- View configuration  -->
 	
 	<bean id="topViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />

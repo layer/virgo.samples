@@ -8,11 +8,14 @@
 	<description>Virgo Server - REST Sample</description>
 
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 
 	<!-- Configure a parent application context -->
+	<context-param>
+    	<param-name>contextConfigLocation</param-name>
+    	<param-value>WEB-INF/applicationContext.xml</param-value>
+	</context-param>
 
 	<context-param>
 		<param-name>contextClass</param-name>
@@ -25,12 +28,12 @@
 
 	<!-- Dispatcher servlet configuration -->
 	<servlet>
-		<servlet-name>dispatcher</servlet-name>
+		<servlet-name>rest</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>dispatcher</servlet-name>
+		<servlet-name>rest</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
 	
