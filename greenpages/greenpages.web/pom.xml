@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.eclipse.virgo</groupId>
 		<artifactId>greenpages.parent</artifactId>
-		<version>2.6.0.RELEASE</version>
+		<version>3.0.0.RELEASE</version>
 		<relativePath>../greenpages.parent</relativePath>
 	</parent>
 
@@ -57,11 +57,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>org.springframework.aspects</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.instrument</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
