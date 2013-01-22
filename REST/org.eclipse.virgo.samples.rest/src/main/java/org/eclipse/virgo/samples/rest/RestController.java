@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/rest")
 public final class RestController {
 
-    @RequestMapping(value="users/{userId}", method = RequestMethod.GET)
+    @RequestMapping(value="/users/{userId}", method = RequestMethod.GET)
     @ResponseBody
     public String getUser(@PathVariable("userId") String userId) {
         return userId;

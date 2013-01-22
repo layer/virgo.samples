@@ -14,10 +14,10 @@
 	<context:component-scan base-package="org.eclipse.virgo.samples.rest" />
 	
 	<!-- process the @RequestMapping annotations at the class level -->
-	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" /> -->
 
 	<!-- process the @RequestMapping annotations at the method level -->
-	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" /> -->
 
 	<!-- View configuration  -->
 	<bean id="topViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

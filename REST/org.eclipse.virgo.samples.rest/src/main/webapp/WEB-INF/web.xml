@@ -14,7 +14,8 @@
 	<!-- Configure a parent application context -->
 	<context-param>
     	<param-name>contextConfigLocation</param-name>
-    	<param-value>WEB-INF/applicationContext.xml</param-value>
+    	<!-- <param-value>WEB-INF/applicationContext.xml</param-value> -->
+    	<param-value>WEB-INF/rest-servlet.xml</param-value>
 	</context-param>
 
 	<context-param>
@@ -34,6 +35,7 @@
 
 	<servlet-mapping>
 		<servlet-name>rest</servlet-name>
+		<url-pattern>/rest/</url-pattern>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
 
