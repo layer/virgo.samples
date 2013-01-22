@@ -36,16 +36,5 @@
 		<servlet-name>rest</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
-	
-	<!--
-	<servlet>
-		<servlet-name>ResourceServlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.ResourceServlet</servlet-class>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>ResourceServlet</servlet-name>
-		<url-pattern>/resources/*</url-pattern>
-	</servlet-mapping> -->
 
 </web-app>

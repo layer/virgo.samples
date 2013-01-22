@@ -18,10 +18,8 @@
 
 	<!-- process the @RequestMapping annotations at the method level -->
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
-	
 
 	<!-- View configuration  -->
-	
 	<bean id="topViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
