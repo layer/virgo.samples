@@ -28,3 +28,4 @@ Import-Package:
  org.springframework.beans.factory.xml;version="[3.0,4.0)"
 Excluded-Exports: *
 Web-ContextPath: rest
+Bundle-Classpath: .,WEB-INF/classes
