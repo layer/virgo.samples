@@ -11,14 +11,12 @@ Web-ContextPath: rest
 Import-Package: org.eclipse.virgo.web.dm;version="[3.0.0,4.0.0)",org.s
  pringframework.beans.factory.xml;version="[3.0,4.0)",org.springframew
  ork.context.config;version="[3.0,4.0)",org.springframework.context.su
- pport;version="[3.0,4.0)",org.springframework.stereotype;version="[3.
- 0,4.0)",org.springframework.web.bind.annotation;version="[3.0,4.0)",o
- rg.springframework.web.context;version="[3.0,4.0)",org.springframewor
- k.web.context.support;version="[3.0,4.0)",org.springframework.web.ser
- vlet;version="[3.0,4.0)",org.springframework.web.servlet.config;versi
- on="[3.0,4.0)",org.springframework.web.servlet.handler;version="[3.0,
- 4.0)",org.springframework.web.servlet.mvc;version="[3.0,4.0)",org.spr
- ingframework.web.servlet.mvc.annotation;version="[3.0,4.0)",org.sprin
- gframework.web.servlet.support;version="[3.0,4.0)",org.springframewor
- k.web.servlet.view;version="[3.0,4.0)"
+ pport;version="[3.0,4.0)",org.springframework.web.context;version="[3
+ .0,4.0)",org.springframework.web.context.support;version="[3.0,4.0)",
+ org.springframework.web.servlet;version="[3.0,4.0)",org.springframewo
+ rk.web.servlet.config;version="[3.0,4.0)",org.springframework.web.ser
+ vlet.handler;version="[3.0,4.0)",org.springframework.web.servlet.mvc;
+ version="[3.0,4.0)",org.springframework.web.servlet.mvc.annotation;ve
+ rsion="[3.0,4.0)",org.springframework.web.servlet.support;version="[3
+ .0,4.0)",org.springframework.web.servlet.view;version="[3.0,4.0)"
 
