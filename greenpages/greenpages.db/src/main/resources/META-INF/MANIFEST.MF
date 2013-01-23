@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-Vendor: SpringSource
 Bundle-Classpath: .
-Bundle-Version: 2.6.0
+Bundle-Version: 3.0.0
 Tool: Bundlor 1.1.0.RELEASE
 Bundle-Name: GreenPages DataSource
 Bundle-ManifestVersion: 2
