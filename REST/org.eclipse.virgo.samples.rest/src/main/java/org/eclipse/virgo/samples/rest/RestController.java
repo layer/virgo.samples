@@ -19,18 +19,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * <p>
- * TODO Document AppController
+ * {@link RestController} is a Spring MVC controller class which handles REST requests.
  * </p>
- *
+ * 
  * <strong>Concurrent Semantics</strong><br />
- *
- * TODO Document concurrent semantics of AppController
- *
+ * 
+ * Thread safe.
+ * 
  */
 @Controller
 public final class RestController {
 
-    @RequestMapping(value="/users/{userId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/users/{userId}", method = RequestMethod.GET)
     @ResponseBody
     public String getUser(@PathVariable("userId") String userId) {
         return userId;
