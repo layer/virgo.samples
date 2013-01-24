@@ -29,12 +29,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * <p>
- * {@link RestController} is a Spring MVC controller class which handles REST requests.
+ * {@link RestController} uses Spring MVC to implement a REST service which associates names and web sites with "user ids".
  * <p/>
- * GET requests specify a user id, e.g.:
+ * GET requests may specify a user id, e.g.:
  * 
  * <pre>
  * GET /rest/users/roy HTTP/1.1
+ * Accept: application/json
+ * </pre>
+ * 
+ * or may be used to inquire all users, e.g.:
+ * 
+ * <pre>
+ * GET /rest/users HTTP/1.1
  * Accept: application/json
  * </pre>
  * 
@@ -46,18 +53,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * 
  * Note: the web site parameter must not include "http://" since Tomcat rejects the proper encoding of this string.
  * </p>
- * you can use curl to drive this program as follows:
+ * You can use curl to drive this program as follows:
  * 
  * <pre>
  * curl -i -H "Accept: application/json" http://localhost:8080/rest/users/roy
  * curl -i -X PUT http://localhost:8080/rest/users/glyn/Glyn%20Normington/underlap.blogspot.com
  * curl -i -H "Accept: application/json" http://localhost:8080/rest/users/glyn
+ * curl -i -H "Accept: application/json" http://localhost:8080/rest/users
  * </pre>
  * 
- * The implementation is deliberately primitive. Please consult the following for more information:
+ * The implementation is deliberately primitive.
+ * <p/>
+ * Please consult the following for more information on REST and its support in Spring:
  * <p/>
  * <ul>
- * <li><a href="http://en.wikipedia.org/wiki/Representational_state_transfer">Representational State Transfer</a> (Wikipedia article)
+ * <li><a href="http://en.wikipedia.org/wiki/Representational_state_transfer">Representational State Transfer</a>
+ * (Wikipedia article)
  * <li><a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">Architectural Styles and the Design of
  * Network-based Software Architectures</a> (Roy Fielding's REST dissertation)</li>
  * <li><a href="http://static.springsource.org/spring/docs/3.1.0.RELEASE/reference/html/mvc.html">Spring Web MVC
@@ -92,13 +103,13 @@ public final class RestController {
             return new ResponseEntity<String>("", headers, HttpStatus.NOT_FOUND);
         }
     }
-    
+
     @RequestMapping(value = "/users", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public ResponseEntity<String> getUsers() {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
-            return new ResponseEntity<String>(toJson(), headers, HttpStatus.OK);
+        return new ResponseEntity<String>(toJson(), headers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/users/{userId}/{name}/{site}", method = RequestMethod.PUT)
@@ -123,7 +134,7 @@ public final class RestController {
         json.append("]");
         return json.toString();
     }
-    
+
     private class Info {
 
         private String name;
@@ -140,4 +151,3 @@ public final class RestController {
         }
     }
 }
-
