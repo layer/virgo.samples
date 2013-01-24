@@ -11,6 +11,12 @@
 
 package org.eclipse.virgo.samples.rest;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -49,16 +55,50 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public final class RestController {
 
-    @RequestMapping(value = "/users/{userId}", method = RequestMethod.GET, produces="application/json")
+    private class Info {
+
+        private String name;
+
+        private String site;
+
+        Info(String name, String site) {
+            this.name = name;
+            this.site = site;
+        }
+
+        String getName() {
+            return this.name;
+        }
+
+        String getSite() {
+            return this.site;
+        }
+    }
+
+    private Map<String, Info> model = Collections.synchronizedMap(new HashMap<String, Info>());
+
+    public RestController() {
+        this.model.put("roy", new Info("Roy T. Fielding", "http://roy.gbiv.com"));
+    }
+
+    @RequestMapping(value = "/users/{userId}", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public ResponseEntity<String> getUser(@PathVariable("userId") String userId) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
-        if ("roy".equals(userId)) {
-            return new ResponseEntity<String>("{ \"name\" : \"Roy T. Fielding\", \"site\" : \"http://roy.gbiv.com/\" }", headers, HttpStatus.OK);
+        Info info = model.get(userId);
+        if (info != null) {
+            return new ResponseEntity<String>("{ \"name\" : \"" + info.getName() + "\", \"site\" : \"" + info.getSite() + "\" }", headers,
+                HttpStatus.OK);
         } else {
             return new ResponseEntity<String>("", headers, HttpStatus.NOT_FOUND);
         }
     }
 
+    @RequestMapping(value = "/users/{userId}/{name}/{site}", method = RequestMethod.PUT)
+    public void putUser(@PathVariable("userId") String userId, @PathVariable("name") String name, @PathVariable("site") String site,
+        HttpServletResponse httpServletResponse) {
+        this.model.put(userId, new Info(name, site));
+        httpServletResponse.setStatus(HttpServletResponse.SC_OK);
+    }
 }
