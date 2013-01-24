@@ -14,6 +14,7 @@ package org.eclipse.virgo.samples.rest;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -91,6 +92,14 @@ public final class RestController {
             return new ResponseEntity<String>("", headers, HttpStatus.NOT_FOUND);
         }
     }
+    
+    @RequestMapping(value = "/users", method = RequestMethod.GET, produces = "application/json")
+    @ResponseBody
+    public ResponseEntity<String> getUsers() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+            return new ResponseEntity<String>(toJson(), headers, HttpStatus.OK);
+    }
 
     @RequestMapping(value = "/users/{userId}/{name}/{site}", method = RequestMethod.PUT)
     public void putUser(@PathVariable("userId") String userId, @PathVariable("name") String name, @PathVariable("site") String site,
@@ -99,6 +108,22 @@ public final class RestController {
         httpServletResponse.setStatus(HttpServletResponse.SC_OK);
     }
 
+    private String toJson() {
+        StringBuffer json = new StringBuffer();
+        boolean first = true;
+        json.append("[");
+        for (String name : this.model.keySet()) {
+            if (first) {
+                first = false;
+            } else {
+                json.append(", ");
+            }
+            json.append("/rest/users/" + name);
+        }
+        json.append("]");
+        return json.toString();
+    }
+    
     private class Info {
 
         private String name;
