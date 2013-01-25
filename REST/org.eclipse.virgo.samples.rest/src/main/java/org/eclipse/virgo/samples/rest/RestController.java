@@ -56,7 +56,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * 
  * <pre>
  * curl -i -H "Accept: application/json" http://localhost:8080/rest/users/roy
- * curl -i -X PUT /rest/users/james/Sir%20James%20Dyson/Cyclonic%20Separation
+ * curl -i -X PUT http://localhost:8080/rest/users/james/Sir%20James%20Dyson/Cyclonic%20Separation
  * curl -i -H "Accept: application/json" http://localhost:8080/rest/users/james
  * curl -i -H "Accept: application/json" http://localhost:8080/rest/users
  * </pre>
@@ -90,25 +90,21 @@ public final class RestController {
         this.model.put("roy", new Info("Roy T. Fielding", "Representational State Transfer"));
     }
 
-    @RequestMapping(value = "/users/{userId}", method = RequestMethod.GET, produces = "application/json")
-    @ResponseBody
-    public ResponseEntity<String> getUser(@PathVariable("userId") String userId) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json; charset=utf-8");
-        Info info = model.get(userId);
-        if (info != null) {
-            return new ResponseEntity<String>(info.toJson(), headers, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<String>("", headers, HttpStatus.NOT_FOUND);
-        }
-    }
-
     @RequestMapping(value = "/users", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public ResponseEntity<String> getUsers() {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json; charset=utf-8");
-        return new ResponseEntity<String>(toJson(), headers, HttpStatus.OK);
+        return createResponseEntity(toJson(), HttpStatus.OK);
+    }
+    
+    @RequestMapping(value = "/users/{userId}", method = RequestMethod.GET, produces = "application/json")
+    @ResponseBody
+    public ResponseEntity<String> getUser(@PathVariable("userId") String userId) {
+        Info info = model.get(userId);
+        if (info != null) {
+            return createResponseEntity(info.toJson(), HttpStatus.OK);
+        } else {
+            return createResponseEntity("", HttpStatus.NOT_FOUND);
+        }
     }
 
     @RequestMapping(value = "/users/{userId}/{name}/{invention}", method = RequestMethod.PUT)
@@ -118,6 +114,12 @@ public final class RestController {
         httpServletResponse.setStatus(HttpServletResponse.SC_OK);
     }
 
+    public ResponseEntity<String> createResponseEntity(String json, HttpStatus status) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        return new ResponseEntity<String>(json + "\n", headers, status);
+    }
+    
     private String toJson() {
         StringBuffer json = new StringBuffer();
         boolean first = true;
