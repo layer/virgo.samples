@@ -14,7 +14,6 @@ package org.eclipse.virgo.samples.rest;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -29,7 +28,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * <p>
- * {@link RestController} uses Spring MVC to implement a REST service which associates names and web sites with "user ids".
+ * {@link RestController} uses Spring MVC to implement a REST service which associates names and inventions with
+ * "user ids".
  * <p/>
  * GET requests may specify a user id, e.g.:
  * 
@@ -45,20 +45,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Accept: application/json
  * </pre>
  * 
- * whereas PUT requests specify a user id, a name, and a web site, e.g.:
+ * whereas PUT requests specify a user id, a name, and an invention, e.g.:
  * 
  * <pre>
- * PUT /rest/users/glyn/Glyn%20Normington/underlap.blogspot.com HTTP/1.1
+ * PUT /rest/users/james/Sir%20James%20Dyson/Cyclonic%20Separation HTTP/1.1
  * </pre>
  * 
- * Note: the web site parameter must not include "http://" since Tomcat rejects the proper encoding of this string.
  * </p>
  * You can use curl to drive this program as follows:
  * 
  * <pre>
  * curl -i -H "Accept: application/json" http://localhost:8080/rest/users/roy
- * curl -i -X PUT http://localhost:8080/rest/users/glyn/Glyn%20Normington/underlap.blogspot.com
- * curl -i -H "Accept: application/json" http://localhost:8080/rest/users/glyn
+ * curl -i -X PUT /rest/users/james/Sir%20James%20Dyson/Cyclonic%20Separation
+ * curl -i -H "Accept: application/json" http://localhost:8080/rest/users/james
  * curl -i -H "Accept: application/json" http://localhost:8080/rest/users
  * </pre>
  * 
@@ -88,7 +87,7 @@ public final class RestController {
     private Map<String, Info> model = Collections.synchronizedMap(new HashMap<String, Info>());
 
     public RestController() {
-        this.model.put("roy", new Info("Roy T. Fielding", "roy.gbiv.com"));
+        this.model.put("roy", new Info("Roy T. Fielding", "Representational State Transfer"));
     }
 
     @RequestMapping(value = "/users/{userId}", method = RequestMethod.GET, produces = "application/json")
@@ -112,10 +111,10 @@ public final class RestController {
         return new ResponseEntity<String>(toJson(), headers, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/users/{userId}/{name}/{site}", method = RequestMethod.PUT)
-    public void putUser(@PathVariable("userId") String userId, @PathVariable("name") String name, @PathVariable("site") String site,
+    @RequestMapping(value = "/users/{userId}/{name}/{invention}", method = RequestMethod.PUT)
+    public void putUser(@PathVariable("userId") String userId, @PathVariable("name") String name, @PathVariable("invention") String invention,
         HttpServletResponse httpServletResponse) {
-        this.model.put(userId, new Info(name, site));
+        this.model.put(userId, new Info(name, invention));
         httpServletResponse.setStatus(HttpServletResponse.SC_OK);
     }
 
@@ -139,15 +138,15 @@ public final class RestController {
 
         private String name;
 
-        private String site;
+        private String invention;
 
-        Info(String name, String site) {
+        Info(String name, String invention) {
             this.name = name;
-            this.site = site;
+            this.invention = invention;
         }
 
         String toJson() {
-            return "{ \"name\" : \"" + this.name + "\", \"site\" : \"http://" + this.site + "\" }";
+            return "{ \"name\" : \"" + this.name + "\", \"invention\" : \"" + this.invention + "\" }";
         }
     }
 }
