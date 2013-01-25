@@ -14,6 +14,7 @@
 		<pathelement location="../formtags/shared-services/org.eclipse.virgo.samples.formtags.shared-services.war"/>
 		<pathelement location="../formtags/par/org.eclipse.virgo.samples.formtags"/>
 		<pathelement location="../no-spring-web"/>
+		<pathelement location="../REST/org.eclipse.virgo.samples.rest"/>
 	</path>
 
 	<path id="doc.bundles">
@@ -86,6 +87,14 @@
 				<include name="**/target/artifacts/*.war"/>
 			</fileset>
 			<flattenmapper/>
+		</copy>
+
+		<copy todir="${package.output.dir}/REST">
+			<fileset dir="${basedir}/../REST">
+				<include name="README"/>
+				<include name="org.eclipse.virgo.samples.rest/**"/>
+				<include name="**/target/artifacts/*.jar"/>
+			</fileset>
 		</copy>
 
 		<chmod perm="755">
