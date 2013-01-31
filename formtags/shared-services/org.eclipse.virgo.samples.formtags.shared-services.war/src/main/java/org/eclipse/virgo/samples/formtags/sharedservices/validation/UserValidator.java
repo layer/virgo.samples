@@ -8,7 +8,7 @@
  * Contributors:
  *   VMware Inc. - initial contribution
  *******************************************************************************/
-package org.eclipse.virgo.samples.formtags.formtags.validation;
+package org.eclipse.virgo.samples.formtags.sharedservices.validation;
 
 import org.eclipse.virgo.samples.formtags.sharedservices.domain.User;
 

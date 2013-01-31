@@ -5,6 +5,6 @@
 		http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<reference id="userManager" interface="org.eclipse.virgo.samples.formtags.formtags.service.UserManager" />
+	<reference id="userManager" interface="org.eclipse.virgo.samples.formtags.sharedservices.service.UserManager" />
 
 </beans:beans>

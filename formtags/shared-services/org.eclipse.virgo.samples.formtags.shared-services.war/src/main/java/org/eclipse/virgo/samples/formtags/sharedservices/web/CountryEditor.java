@@ -9,13 +9,13 @@
  *   VMware Inc. - initial contribution
  *******************************************************************************/
 
-package org.eclipse.virgo.samples.formtags.formtags.web;
+package org.eclipse.virgo.samples.formtags.sharedservices.web;
 
 
 
-import org.eclipse.virgo.samples.formtags.par.domain.Country;
 
-import org.eclipse.virgo.samples.formtags.par.service.UserManager;
+import org.eclipse.virgo.samples.formtags.sharedservices.domain.Country;
+import org.eclipse.virgo.samples.formtags.sharedservices.service.UserManager;
 
 
 
@@ -44,7 +44,7 @@ public class CountryEditor extends PropertyEditorSupport {
 
     /**
 
-     * Creates a new instance of the {@link org.eclipse.virgo.samples.formtags.formtags.web.CountryEditor} class.
+     * Creates a new instance of the {@link org.eclipse.virgo.samples.formtags.sharedservices.web.CountryEditor} class.
 
      *
 

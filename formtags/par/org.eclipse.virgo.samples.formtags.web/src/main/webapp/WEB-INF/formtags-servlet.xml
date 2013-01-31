@@ -7,20 +7,20 @@
 		<property name="suffix" value=".jsp"/>
 	</bean>
 
-	<bean name="/list.htm" class="org.eclipse.virgo.samples.formtags.formtags.web.ListController">
+	<bean name="/list.htm" class="org.eclipse.virgo.samples.formtags.par.web.ListController">
 		<property name="userManager" ref="userManager"/>
 	</bean>
 
-	<bean name="/form.htm" class="org.eclipse.virgo.samples.formtags.formtags.web.FormController">
+	<bean name="/form.htm" class="org.eclipse.virgo.samples.formtags.par.web.FormController">
 		<property name="formView" value="form"/>
 		<property name="successView" value="redirect:list.htm"/>
 		<property name="userManager" ref="userManager"/>
 		<property name="validators">
-			<bean id="userValidator" class="org.eclipse.virgo.samples.formtags.formtags.validation.UserValidator"/>
+			<bean id="userValidator" class="org.eclipse.virgo.samples.formtags.par.validation.UserValidator"/>
 		</property>
 	</bean>
 
-	<bean name="/about.htm" class="org.eclipse.virgo.samples.formtags.formtags.web.ListController">
+	<bean name="/about.htm" class="org.eclipse.virgo.samples.formtags.par.web.ListController">
 		<property name="userManager" ref="userManager"/>
 		<property name="viewName" value="about"/>
 	</bean>

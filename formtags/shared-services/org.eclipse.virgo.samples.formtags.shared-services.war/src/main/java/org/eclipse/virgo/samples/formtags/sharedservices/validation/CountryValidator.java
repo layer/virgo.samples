@@ -8,10 +8,9 @@
  * Contributors:
  *   VMware Inc. - initial contribution
  *******************************************************************************/
+package org.eclipse.virgo.samples.formtags.sharedservices.validation;
 
-package org.eclipse.virgo.samples.formtags.formtags.validation;
-
-import org.eclipse.virgo.samples.formtags.par.domain.Country;
+import org.eclipse.virgo.samples.formtags.sharedservices.domain.Country;
 
 import org.springframework.util.StringUtils;
 
@@ -25,12 +24,13 @@ import org.springframework.validation.Validator;
  */
 public class CountryValidator implements Validator {
 
-    public static final String DEFAULT_BAD_PLACEHOLDER_CODE = "-";
+	public static final String DEFAULT_BAD_PLACEHOLDER_CODE = "-";
 
     private String badPlaceholderCode = DEFAULT_BAD_PLACEHOLDER_CODE;
 
     public void setBadPlaceholderCode(String badPlaceholderCode) {
-        this.badPlaceholderCode = StringUtils.hasText(badPlaceholderCode) ? badPlaceholderCode : DEFAULT_BAD_PLACEHOLDER_CODE;
+        this.badPlaceholderCode = StringUtils.hasText(badPlaceholderCode)
+                ? badPlaceholderCode : DEFAULT_BAD_PLACEHOLDER_CODE;
     }
 
     public boolean supports(Class<?> candidate) {
@@ -43,5 +43,5 @@ public class CountryValidator implements Validator {
             errors.rejectValue("bad.country.selected", "Please select a valid country");
         }
     }
-    
+
 }

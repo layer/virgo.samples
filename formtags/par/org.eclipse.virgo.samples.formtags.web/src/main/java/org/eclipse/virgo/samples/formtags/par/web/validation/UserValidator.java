@@ -9,7 +9,7 @@
  *   VMware Inc. - initial contribution
  *******************************************************************************/
 
-package org.eclipse.virgo.samples.formtags.formtags.validation;
+package org.eclipse.virgo.samples.formtags.par.web.validation;
 
 import org.eclipse.virgo.samples.formtags.par.domain.User;
 

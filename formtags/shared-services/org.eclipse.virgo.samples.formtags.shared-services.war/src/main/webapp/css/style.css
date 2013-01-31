@@ -2,7 +2,7 @@ body
 {
 	margin: 0;
 	margin: 0 auto;
-	background: #f4f4f4 url(images/bg.gif) top center repeat-y;
+	background-color: #f4f4f4;
 }
 #header
 {

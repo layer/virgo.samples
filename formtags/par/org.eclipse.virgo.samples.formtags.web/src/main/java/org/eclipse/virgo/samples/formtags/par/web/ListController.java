@@ -8,7 +8,7 @@
  * Contributors:
  *   VMware Inc. - initial contribution
  *******************************************************************************/
-package org.eclipse.virgo.samples.formtags.formtags.web;
+package org.eclipse.virgo.samples.formtags.par.web;
 
 import org.eclipse.virgo.samples.formtags.par.service.UserManager;
 

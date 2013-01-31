@@ -9,7 +9,7 @@
  *   VMware Inc. - initial contribution
  *******************************************************************************/
 
-package org.eclipse.virgo.samples.formtags.formtags.web;
+package org.eclipse.virgo.samples.formtags.sharedservices.web;
 
 
 
