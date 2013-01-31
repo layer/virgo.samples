@@ -16,7 +16,7 @@
 		<property name="successView" value="redirect:list.htm"/>
 		<property name="userManager" ref="userManager"/>
 		<property name="validators">
-			<bean id="userValidator" class="org.eclipse.virgo.samples.formtags.par.validation.UserValidator"/>
+			<bean id="userValidator" class="org.eclipse.virgo.samples.formtags.par.web.validation.UserValidator"/>
 		</property>
 	</bean>
 

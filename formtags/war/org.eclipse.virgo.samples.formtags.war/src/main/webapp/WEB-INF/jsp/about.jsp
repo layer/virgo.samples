@@ -24,7 +24,7 @@
     </div>
 
     <div id="header">
-      <span class="title">Virgo Server<span class="darktitle">2.0</span> form tags</span><br/>
+      <span class="title">Virgo Server <span class="darktitle">3.0</span> form tags</span><br/>
     </div>
 
 
@@ -32,7 +32,7 @@
        <div id="block">
           <p>
 The Spring MVC form tags application showcases the new form
-tag library introduced in Spring 2.0.</p>
+tag library introduced in Spring.</p>
 
 <p>The web application is *very* simplistic, because the intent is
 to convey the essence of the new form tags themselves and nothing
@@ -49,7 +49,6 @@ else.</p>
       </c:forEach>
 
     </div>
-    <p>New JSP tags in Spring 2.0 make building forms with Spring MVC much easier</p>
     <div class="menu">
        <a href="<c:url value="/list.htm"/>">Home</a>
     </div>

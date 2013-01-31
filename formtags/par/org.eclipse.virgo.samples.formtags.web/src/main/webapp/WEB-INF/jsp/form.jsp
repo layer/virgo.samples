@@ -22,7 +22,7 @@
     </div>
 
     <div id="header">
-      <span class="title">Virgo Server <span class="darktitle">2.0</span> form tags</span><br/>
+      <span class="title">Virgo Server <span class="darktitle">3.0</span> form tags</span><br/>
     </div>
 
     <div id="content">
@@ -216,7 +216,6 @@
       </c:forEach>
 
     </div>
-    <p>New JSP tags in Spring 2.0 make building forms with Spring MVC much easier.</p>
     <div class="menu">
         <a href="<c:url value="/about.htm"/>">About</a>
         <a href="<c:url value="/list.htm"/>">Home</a>

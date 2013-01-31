@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Application-SymbolicName: org.eclipse.virgo.samples.formtags.formtags_par
+Application-SymbolicName: org.eclipse.virgo.samples.formtags.par
 Application-Version: 3.0.0
-Application-Name: FormTags Showcase Application (PAR)
+Application-Name: FormTags Sample Application (PAR)
 
 
