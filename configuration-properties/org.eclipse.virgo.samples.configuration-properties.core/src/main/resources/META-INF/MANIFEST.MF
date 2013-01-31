@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Export-Package: org.eclipse.virgo.samples.configuration.properties.cor
  e;version="3.0.0"
 Bundle-Version: 3.0.0
-Tool: Bundlor 1.1.1.RELEASE
+Tool: Bundlor 1.1.2.RELEASE
 Bundle-Name: Configuration Sample Content Bundle
 Bundle-ManifestVersion: 2
 Bundle-Description: Configuration Sample Content Provider

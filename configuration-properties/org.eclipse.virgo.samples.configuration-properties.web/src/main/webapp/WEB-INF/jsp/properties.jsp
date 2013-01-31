@@ -5,10 +5,10 @@
 <head>
 	<title>Configuration properties sample</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<link rel="shortcut icon" href="/resources/images/favicon.ico"  />
-	<link rel="stylesheet" href="/resources/styles/main.css"        type="text/css" />
-	<link rel="stylesheet" href="/resources/styles/local.css"       type="text/css" />
-	<link rel="stylesheet" href="/resources/styles/print.css"       type="text/css" media="print" />
+	<link rel="shortcut icon" href="<c:url value="/resources/images/favicon.ico"/>"	/>
+	<link rel="stylesheet" href="	<c:url value="/resources/styles/main.css" 	/>"	type="text/css" />
+	<link rel="stylesheet" href="	<c:url value="/resources/styles/local.css"	/>"	type="text/css" />
+	<link rel="stylesheet" href="	<c:url value="/resources/styles/print.css"	/>"	type="text/css" media="print" />
 </head>
 <body class="main tundra">
 	<div id="page">
@@ -20,14 +20,14 @@
 		<div id="primary-navigation">
 			<div id="primary-left">
 			</div>
-			<img id="left-curve" src="/config-properties/images/menu-curve-left.png"/>
+			<img id="left-curve" src="<c:url value="/resources/images/menu-curve-left.png" />"/>
 			<div id="primary-right">
 				<ul>
 					<li><a href="/admin" title="Admin Console">Admin Console</a></li>
 					<li><a href="http://www.eclipse.org/virgo" title="Virgo">Virgo</a></li>
 				</ul>
 			</div>
-			<img id="right-curve" src="/config-properties/images/menu-curve-right.png"/>
+			<img id="right-curve" src="<c:url value="/resources/images/menu-curve-right.png" />" />
 		</div><!-- /primary-navigation -->
 
 		<div id="container">

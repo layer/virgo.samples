@@ -8,12 +8,12 @@
 				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
 				http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
 
-
 	<mvc:annotation-driven />
+	
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 	
 	<context:component-scan base-package="org.eclipse.virgo.samples.configuration.properties.web" />
 	
-
 	<!-- VIEW CONFIG  -->
 	
 	<bean id="topViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
