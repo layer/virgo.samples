@@ -74,17 +74,19 @@
 			<flattenmapper/>
 		</copy>
 		
-		<copy todir="${package.output.dir}/no-spring-web">
-			<fileset dir="${basedir}/../no-spring-web">
-				<include name="**/target/artifacts/*.jar"/>
-			</fileset>
-			<flattenmapper/>
-		</copy>
-		
 		<copy todir="${package.output.dir}/formtags">
 			<fileset dir="${basedir}/../formtags">
 				<include name="**/target/artifacts/*.jar"/>
 				<include name="**/target/artifacts/*.war"/>
+			</fileset>
+			<flattenmapper/>
+		</copy>
+		
+		<copy todir="${package.output.dir}/no-spring-web">
+			<fileset dir="${basedir}/../no-spring-web">
+				<include name="**"/>
+				<exclude name="**/target/**"/>
+				<include name="**/target/artifacts/*.jar"/>
 			</fileset>
 			<flattenmapper/>
 		</copy>
@@ -93,6 +95,7 @@
 			<fileset dir="${basedir}/../REST">
 				<include name="README"/>
 				<include name="org.eclipse.virgo.samples.rest/**"/>
+				<exclude name="**/target/**"/>
 				<include name="**/target/artifacts/*.jar"/>
 			</fileset>
 		</copy>
