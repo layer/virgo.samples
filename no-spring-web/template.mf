@@ -9,6 +9,7 @@ Import-Template:
  org.slf4j;version="${org.slf4j.api:[=.=.=,+1)}"
 Import-Package: 
  javax.servlet;version="${javax.servlet:[2.6,+1)}", 
- javax.servlet.http;version="${javax.servlet:[2.6,+1)}"
+ javax.servlet.http;version="${javax.servlet:[2.6,+1)}",
+ org.slf4j;version="${org.slf4j.api:[=.=.=,+1)}"
 Excluded-Exports: *
 
