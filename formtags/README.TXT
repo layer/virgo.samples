@@ -64,25 +64,25 @@ Alternatively, you can deploy the applications via the web-based admin console
 (e.g., http://localhost:8080/admin).
 
 Standard WAR
- - Copy dist/formtags-war-2.0.1.RELEASE.war to the SERVER_HOME/pickup
+ - Copy dist/formtags-war-3.0.0.RELEASE.war to the SERVER_HOME/pickup
    directory.
  - Open http://localhost:8080/formtags-war-1.0.0.RELEASE
 
 Shared Libraries WAR
- - Copy dist/formtags-shared-libs-2.0.1.RELEASE.war to the SERVER_HOME/pickup
+ - Copy dist/formtags-shared-libs-3.0.0.RELEASE.war to the SERVER_HOME/pickup
    directory.
- - Open http://localhost:8080/formtags-shared-libs-2.0.1.RELEASE
+ - Open http://localhost:8080/formtags-shared-libs-3.0.0.RELEASE
 
 Shared Services WAR
  - Note that the 'service' bundle must be deployed prior to the WAR.
- - Copy dist/formtags-shared-services-service-2.0.1.RELEASE.jar to the
+ - Copy dist/formtags-shared-services-service-3.0.0.RELEASE.jar to the
    SERVER_HOME/pickup directory.
- - Copy dist/formtags-shared-services-war-2.0.1.RELEASE.war to the
+ - Copy dist/formtags-shared-services-war-3.0.0.RELEASE.war to the
    SERVER_HOME/pickup directory.
- - Open http://localhost:8080/formtags-shared-services-war-2.0.1.RELEASE
+ - Open http://localhost:8080/formtags-shared-services-war-3.0.0.RELEASE
 
 PAR with a Web Bundle
- - Copy dist/formtags-par-2.0.1.RELEASE.par to the SERVER_HOME/pickup
+ - Copy dist/formtags-par-3.0.0.RELEASE.par to the SERVER_HOME/pickup
    directory.
  - Open http://localhost:8080/formtags-par
 

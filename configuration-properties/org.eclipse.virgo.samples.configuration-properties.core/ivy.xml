@@ -29,7 +29,7 @@
 		<dependency org="org.springframework" name="org.springframework.beans" rev="${org.springframework}" conf="provided->runtime"/>
 		<!-- === TEST ====================================================== -->
 		<dependency org="org.junit" name="com.springsource.org.junit" rev="${org.junit}" conf="test->runtime"/>
-		<dependency org="org.eclipse.virgo.test" name="org.eclipse.virgo.test.stubs.osgi" rev="${org.eclipse.virgo.test}" conf="test->runtime"/>
+		<dependency org="org.eclipse.virgo.test" name="org.eclipse.virgo.test.stubs" rev="${org.eclipse.virgo.test}" conf="test->runtime"/>
 		
 	</dependencies>
 

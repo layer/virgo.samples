@@ -13,7 +13,7 @@
 		<pathelement location="../formtags/shared-services/org.eclipse.virgo.samples.formtags.shared-services.service"/>
 		<pathelement location="../formtags/shared-services/org.eclipse.virgo.samples.formtags.shared-services.war"/>
 		<pathelement location="../formtags/par/org.eclipse.virgo.samples.formtags"/>
-		<pathelement location="../no-spring-web"/>
+		<pathelement location="../no-spring-web/org.eclipse.virgo.samples.no.spring"/>
 		<pathelement location="../REST/org.eclipse.virgo.samples.rest"/>
 	</path>
 
@@ -68,27 +68,33 @@
 		
 		<copy todir="${package.output.dir}/configuration-properties">
 			<fileset dir="${basedir}/../configuration-properties">
-				<include name="**/target/artifacts/*.jar"/>
-				<include name="**/target/artifacts/*.properties"/>
+				<include name="org.eclipse.virgo.samples.configuration-properties.core/**"/>
+				<include name="org.eclipse.virgo.samples.configuration-properties.web/**"/>
+				<include name="org.eclipse.virgo.samples.configuration-properties.properties/**"/>
+				<exclude name="**/target/**"/>
 			</fileset>
-			<flattenmapper/>
 		</copy>
 		
 		<copy todir="${package.output.dir}/formtags">
 			<fileset dir="${basedir}/../formtags">
-				<include name="**/target/artifacts/*.jar"/>
-				<include name="**/target/artifacts/*.war"/>
+				<include name="README"/>
+				<include name="par/org.eclipse.virgo.samples.formtags/**"/>
+				<include name="par/org.eclipse.virgo.samples.formtags.domain/**"/>
+				<include name="par/org.eclipse.virgo.samples.formtags.service/**"/>
+				<include name="par/org.eclipse.virgo.samples.formtags.web/**"/>
+				<include name="shared-libs/org.eclipse.virgo.samples.formtags.shared-libs/**"/>
+				<include name="shared-services/org.eclipse.virgo.samples.formtags.shared-services.service/**"/>
+				<include name="shared-services/org.eclipse.virgo.samples.formtags.shared-services.war/**"/>
+				<include name="war/org.eclipse.virgo.samples.formtags.war/**"/>
+				<exclude name="**/target/**"/>
 			</fileset>
-			<flattenmapper/>
 		</copy>
 		
 		<copy todir="${package.output.dir}/no-spring-web">
 			<fileset dir="${basedir}/../no-spring-web">
-				<include name="**"/>
+				<include name="org.eclipse.virgo.samples.no.spring/**"/>
 				<exclude name="**/target/**"/>
-				<include name="**/target/artifacts/*.jar"/>
 			</fileset>
-			<flattenmapper/>
 		</copy>
 
 		<copy todir="${package.output.dir}/REST">
@@ -96,8 +102,17 @@
 				<include name="README"/>
 				<include name="org.eclipse.virgo.samples.rest/**"/>
 				<exclude name="**/target/**"/>
-				<include name="**/target/artifacts/*.jar"/>
 			</fileset>
+		</copy>
+
+		<copy todir="${package.output.dir}/bin">
+			<fileset dir="${basedir}/..">
+				<include name="**/target/artifacts/*.jar"/>
+				<include name="**/target/artifacts/*.war"/>
+				<include name="**/target/artifacts/*.par"/>
+				<include name="**/target/artifacts/*.properties"/>
+			</fileset>
+			<flattenmapper/>
 		</copy>
 
 		<chmod perm="755">
