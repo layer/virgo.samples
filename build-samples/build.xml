@@ -63,6 +63,7 @@
 				<include name="bundle.z/**"/>
 				<include name="commands"/>
 				<exclude name="**/target/**"/>
+				<exclude name="**/build.xml"/>
 			</fileset>
 		</copy>
 		
@@ -72,6 +73,7 @@
 				<include name="org.eclipse.virgo.samples.configuration-properties.web/**"/>
 				<include name="org.eclipse.virgo.samples.configuration-properties.properties/**"/>
 				<exclude name="**/target/**"/>
+				<exclude name="**/build.xml"/>
 			</fileset>
 		</copy>
 		
@@ -87,6 +89,7 @@
 				<include name="shared-services/org.eclipse.virgo.samples.formtags.shared-services.war/**"/>
 				<include name="war/org.eclipse.virgo.samples.formtags.war/**"/>
 				<exclude name="**/target/**"/>
+				<exclude name="**/build.xml"/>
 			</fileset>
 		</copy>
 		
@@ -94,6 +97,7 @@
 			<fileset dir="${basedir}/../no-spring-web">
 				<include name="org.eclipse.virgo.samples.no.spring/**"/>
 				<exclude name="**/target/**"/>
+				<exclude name="**/build.xml"/>
 			</fileset>
 		</copy>
 
@@ -102,6 +106,7 @@
 				<include name="README"/>
 				<include name="org.eclipse.virgo.samples.rest/**"/>
 				<exclude name="**/target/**"/>
+				<exclude name="**/build.xml"/>
 			</fileset>
 		</copy>
 
