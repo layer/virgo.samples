@@ -39,6 +39,11 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+		    <groupId>javax.persistence</groupId>
+		    <artifactId>com.springsource.javax.persistence</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.eclipse.virgo</groupId>
 			<artifactId>greenpages.jpa</artifactId>
 			<version>${project.version}</version>
@@ -55,13 +60,28 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.aspects</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>com.springsource.org.apache.commons.dbcp</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>com.springsource.org.apache.commons.logging</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>com.springsource.org.h2</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.instrument</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

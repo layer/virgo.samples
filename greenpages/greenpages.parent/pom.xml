@@ -80,8 +80,26 @@
 				<scope>test</scope>
 			</dependency>
 			<dependency>
+			    <groupId>org.apache.commons</groupId>
+			    <artifactId>com.springsource.org.apache.commons.logging</artifactId>
+			    <version>1.1.1</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>org.springframework.test</artifactId>
+			    <version>3.1.0.RELEASE</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.aspects</artifactId>
+			    <version>3.1.0.RELEASE</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.instrument</artifactId>
 			    <version>3.1.0.RELEASE</version>
 				<scope>test</scope>
 			</dependency>
@@ -139,7 +157,7 @@
 	</repositories>
 
 	<properties>
-		<maven.test.failure.ignore>true</maven.test.failure.ignore>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<pluginRepositories>
@@ -174,10 +192,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.0</version>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.6</source>
+					<target>1.6</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -195,7 +213,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.12</version>
+				<version>2.13</version>
 				<configuration>
 					<includes>
 						<include>**/*Tests.java</include>
@@ -204,6 +222,7 @@
 						<exclude>**/Abstract*.java</exclude>
 					</excludes>
 					<junitArtifactName>org.junit:com.springsource.org.junit</junitArtifactName>
+                    <argLine>-javaagent:${user.home}/.m2/repository/org/springframework/org.springframework.instrument/3.1.0.RELEASE/org.springframework.instrument-3.1.0.RELEASE.jar</argLine>
 				</configuration>
 			</plugin>
 		</plugins>
