@@ -2,7 +2,7 @@
 <project
 		xmlns="http://maven.apache.org/POM/4.0.0"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<parent>
 		<groupId>org.eclipse.virgo</groupId>
@@ -13,8 +13,44 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>greenpages.jpa</artifactId>
-	<name>greenpages.jpa</name>
-	<packaging>jar</packaging>
+	<name>GreenPages JPA</name>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>META-INF/spring/*</include>
+					<include>META-INF/*</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<configuration>
+					<instructions>
+						<Import-Bundle>
+							com.springsource.org.eclipse.persistence;version="[2.0.0,
+							2.1.0)",
+							com.springsource.org.eclipse.persistence.jpa;version="[2.0.0,
+							2.1.0)"
+						</Import-Bundle>
+						<Import-Package>
+							org.springframework.context.weaving;version="[3,
+							4)",
+							org.springframework.transaction.aspectj;version="[3.0, 3.5)",
+							javax.persistence.criteria;version="[2, 2.1)",
+							javax.persistence;version="[2, 2.1)",
+							javax.sql;version="0",
+							*
+						</Import-Package>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencies>
 		<dependency>
@@ -23,30 +59,33 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>org.springframework.spring-library</artifactId>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.spring-library</artifactId>
 			<type>libd</type>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-		    <groupId>javax.persistence</groupId>
-		    <artifactId>com.springsource.javax.persistence</artifactId>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>1.0.2</version>
 		</dependency>
 		<dependency>
-		    <groupId>javax.validation</groupId>
-		    <artifactId>com.springsource.javax.validation</artifactId>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>javax.persistence</artifactId>
+			<version>2.0.0</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>com.springsource.org.eclipse.persistence.internal.libraries.antlr</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>org.eclipse.persistence</groupId>
-		    <artifactId>com.springsource.org.eclipse.persistence</artifactId>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>com.springsource.org.eclipse.persistence</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>org.eclipse.persistence</groupId>
-		    <artifactId>com.springsource.org.eclipse.persistence.jpa</artifactId>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>com.springsource.org.eclipse.persistence.jpa</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.junit</groupId>
@@ -54,8 +93,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>org.springframework.test</artifactId>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.test</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -84,8 +123,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		    <groupId>org.aspectj</groupId>
-		    <artifactId>com.springsource.org.aspectj.weaver</artifactId>
+			<groupId>org.aspectj</groupId>
+			<artifactId>com.springsource.org.aspectj.weaver</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

@@ -13,8 +13,35 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>greenpages.db</artifactId>
-	<name>greenpages.db</name>
-	<packaging>jar</packaging>
+	<name>GreenPages DataSource</name>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>META-INF/spring/*</include>
+				</includes>
+			</resource>
+		</resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                    	<Import-Bundle>
+							com.springsource.org.eclipse.persistence.jpa;version="[2, 3)"
+                    	</Import-Bundle>
+                        <Import-Package>
+                            org.h2;version="[1.0.71,2)",
+							*
+                        </Import-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+	</build>
 
 	<dependencies>
 		<dependency>
@@ -45,11 +72,6 @@
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>com.springsource.org.aspectj.weaver</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.instrument</artifactId>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
