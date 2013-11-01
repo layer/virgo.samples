@@ -49,7 +49,7 @@
 				<include name="greenpages.db/**"/>
 				<include name="greenpages.jpa/**"/>
 				<include name="greenpages.web/**"/>
-				<include name="greenpages.par/**”/>
+				<include name="greenpages.par/**"/>
 				<include name="greenpages.parent/**"/>
 				<include name="pom.xml"/>
 				<exclude name="**/target/**"/>
