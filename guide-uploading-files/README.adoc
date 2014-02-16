@@ -1,0 +1,124 @@
+== Acknowledgements
+
+This guide is inspired by https://spring.io/guides/gs/uploading-files/["Getting Started - Uploading Files"] from the https://spring.io/[Spring] https://spring.io/guides[Guides].
+
+== Multi-part file uploads
+
+The original guide uses http://projects.spring.io/spring-boot/[Spring Boot] to bootstrap the demo application. This guide walks through the necessary
+additional steps/configuration to get "Uploading Files" up and running on Virgo.
+
+== Shopping list
+
+* https://www.eclipse.org/virgo/download/[Virgo Server]
+* http://wiki.eclipse.org/Virgo/Source#Virgo_git_Repositories[Sample Applications]
+* http://spring.io/tools/[Spring Tool Suite™]
+
+NOTE: Only Virgo Server for Apache Tomcat and Virgo Jetty Server are supported by the Virgo Tooling.
+
+== Ingredients
+
+* https://spring.io/guides/gs/uploading-files/[Original "Getting Started - Uploading Files"]
+* Spring configuration
+* Web application configuration
+* OSGi manifest
+
+== Preparations
+
+Install the Virgo server let's say into `VIRGO_HOME`. Start your Spring Tool Suite™ and add the http://wiki.eclipse.org/Virgo/Tooling[Virgo Tooling] to your IDE.
+
+NOTE: For the impatient: This is the http://download.eclipse.org/virgo/release/tooling[update site] URL: http://download.eclipse.org/virgo/release/tooling.
+
+"Define a new server" within the IDE and choose the directory of the previously chosen Virgo installation `VIRGO_HOME`.
+
+Clone the code from http://wiki.eclipse.org/Virgo/Source#Virgo_git_Repositories[Sample Applications] with Git.
+
+----
+git clone git://git.eclipse.org/gitroot/virgo/org.eclipse.virgo.samples.git
+----
+
+Afterwards "Import (Existing Maven Projects)" living inside the folder `guide-uploading-files` into your IDE.
+
+NOTE: Before you can drag'n'drop the project onto your freshly created Virgo Server you have to Virgo -> Add OSGi Project Bundle Nature (via a right click on the project)
+within your IDE.
+
+== Directions
+
+Virgo has no support for Springs `@EnableAutoConfiguration`. Thus you have to be explicit where Spring-Boot configures the embedded Tomcat with reasonable defaults on your behalf.
+Last but not least Virgo is an OSGi runtime and every bundle needs to be explicit about it's needs in the `META-INF/MANIFEST.MF`.
+
+This is mostly about specifying necessary `Import-Package` and the `Web-ContextPath` the file upload application wants to be published.
+
+[source,txt]
+----
+Import-Bundle: org.springframework.beans,
+ org.springframework.context,
+ org.springframework.web,
+ org.springframework.web.servlet
+Import-Package: org.eclipse.virgo.web.dm,
+ org.springframework.core.io;version="[3.1,4)",
+ org.springframework.stereotype;version="[3.1,4)",
+ org.springframework.util;version="[3.1,4)",
+ org.springframework.web.bind.annotation;version="[3.1,4)",
+ org.springframework.web.client;version="[3.1,4)",
+ org.springframework.web.multipart;version="[3.1,4)"
+Web-ContextPath: /upload-guide[]
+----
+
+You can mix and match the Virgo specific header `Import-Bundle` and OSGi standard header `Import-Package` within the `MANIFETS.MF`. In the sample the fine-tuning of the
+`MANIFEST.MF` is done within the Maven pomx.xml.
+
+NOTE: If you intend to run your bundles in different OSGi containers you have to limit yourself to the OSGi standard headers.
+
+Next step is to configuring the servlet container via `WEB-INF/web.xml`:
+
+[source,xml]
+----
+include::src/main/resources/WEB-INF/web.xml[]
+----
+
+NOTE: Most important the `contextClass` which is *not* the default from the Spring Framework, but `org.eclipse.virgo.web.dm.ServerOsgiBundleXmlWebApplicationContext`.
+
+[source,xml]
+----
+<context-param>
+    <param-name>contextClass</param-name>
+    <param-value>org.eclipse.virgo.web.dm.ServerOsgiBundleXmlWebApplicationContext</param-value>
+</context-param>[]
+----
+
+Finally the Spring web application context. Nothing Virgo specific here:
+
+[source,xml]
+----
+include::src/main/resources/WEB-INF/spring/appServlet/servlet-context.xml[]
+----
+
+== Let's taste
+
+For easy client-side consumption of the file upload you can use the `FileUploader`.
+
+[source,java]
+----
+include::src/main/java/org/eclipse/virgo/guides/uploading/internal/FileUploader.java[]
+----
+
+NOTE: Please see the original guide https://spring.io/guides/gs/uploading-files/["Getting Started - Uploading Files"] for more background information about this client.
+
+There is an easy way to use the `FileUploader` with Maven:
+
+----
+$ mvn package exec:java
+----
+
+Or if you are more used to `curl` and the command line simply run the following command within the project's directory.
+
+----
+curl -F "name=sample.txt-uploaded" -F "file=sample.txt" \
+ http://localhost:8080/upload-guide/upload
+----
+
+Either way you should see the following output independent of your choice:
+
+....
+You successfully uploaded sample.txt into sample.txt-uploaded !
+....
