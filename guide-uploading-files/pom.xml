@@ -64,7 +64,7 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>hello.FileUploader</mainClass>
+					<mainClass>org.eclipse.virgo.guides.uploading.internal.FileUploader</mainClass>
 					<arguments>
 						<argument>sample.txt</argument>
 					</arguments>
